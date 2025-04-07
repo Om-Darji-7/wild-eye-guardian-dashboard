@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { Camera, MapPin, Upload, Send, X } from "lucide-react";
+import { Camera, MapPin, Upload, Send, X, AlertTriangle } from "lucide-react";
 import { toast } from "sonner";
 
 const IncidentForm: React.FC = () => {
