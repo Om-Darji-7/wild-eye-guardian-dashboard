@@ -27,7 +27,7 @@ const LoginForm: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center py-12 px-6 lg:px-8 bg-gradient-to-b from-wildlife-dark to-wildlife-dark-blue">
+    <div className="min-h-screen flex flex-col justify-center py-12 px-6 lg:px-8 bg-gradient-to-b from-[#C1E1C1] to-[#4CAF50]">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="flex justify-center mb-6">
           <Logo />
@@ -35,7 +35,7 @@ const LoginForm: React.FC = () => {
         <h2 className="text-center text-3xl font-extrabold text-white">
           {isLogin ? "Sign in to Wild Eye" : "Create your account"}
         </h2>
-        <p className="mt-2 text-center text-sm text-gray-400">
+        <p className="mt-2 text-center text-sm text-green-100">
           {isLogin
             ? "Enter your credentials to access the dashboard"
             : "Join us in monitoring and protecting wildlife"}
@@ -43,10 +43,10 @@ const LoginForm: React.FC = () => {
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="py-8 px-6 glass-card shadow rounded-lg">
+        <div className="py-8 px-6 bg-white/10 backdrop-blur-sm border border-white/20 shadow rounded-lg">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-300">
+              <label htmlFor="email" className="block text-sm font-medium text-white">
                 Email address
               </label>
               <div className="mt-1">
@@ -58,14 +58,14 @@ const LoginForm: React.FC = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="appearance-none block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-wildlife-purple focus:border-wildlife-purple bg-gray-800 text-white sm:text-sm"
+                  className="appearance-none block w-full px-3 py-2 border border-green-700/30 rounded-md shadow-sm placeholder-green-700/50 focus:outline-none focus:ring-green-500 focus:border-green-500 bg-white/20 text-white sm:text-sm"
                   placeholder="ranger@wildeye.org"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-300">
+              <label htmlFor="password" className="block text-sm font-medium text-white">
                 Password
               </label>
               <div className="mt-1 relative">
@@ -77,12 +77,12 @@ const LoginForm: React.FC = () => {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="appearance-none block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-wildlife-purple focus:border-wildlife-purple bg-gray-800 text-white sm:text-sm"
+                  className="appearance-none block w-full px-3 py-2 border border-green-700/30 rounded-md shadow-sm placeholder-green-700/50 focus:outline-none focus:ring-green-500 focus:border-green-500 bg-white/20 text-white sm:text-sm"
                   placeholder="••••••••"
                 />
                 <button
                   type="button"
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-300"
+                  className="absolute inset-y-0 right-0 pr-3 flex items-center text-green-200 hover:text-white"
                   onClick={() => setShowPassword(!showPassword)}
                 >
                   {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
@@ -93,7 +93,7 @@ const LoginForm: React.FC = () => {
             {isLogin && (
               <div className="flex items-center justify-end">
                 <div className="text-sm">
-                  <a href="#" className="font-medium text-wildlife-purple hover:text-wildlife-purple/80">
+                  <a href="#" className="font-medium text-green-200 hover:text-white">
                     Forgot your password?
                   </a>
                 </div>
@@ -103,7 +103,7 @@ const LoginForm: React.FC = () => {
             <div>
               <button
                 type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-wildlife-purple hover:bg-wildlife-purple/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-wildlife-purple focus:ring-offset-gray-800"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-green-900 bg-green-200 hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-300 focus:ring-offset-green-800"
               >
                 {isLogin ? "Sign in" : "Sign up"}
               </button>
@@ -113,10 +113,10 @@ const LoginForm: React.FC = () => {
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-700"></div>
+                <div className="w-full border-t border-green-700/30"></div>
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-wildlife-dark-blue text-gray-400">
+                <span className="px-2 bg-green-800/30 backdrop-blur-sm text-green-100">
                   {isLogin ? "New to Wild Eye?" : "Already have an account?"}
                 </span>
               </div>
@@ -125,7 +125,7 @@ const LoginForm: React.FC = () => {
             <div className="mt-6">
               <button
                 type="button"
-                className="w-full flex justify-center py-2 px-4 border border-gray-700 rounded-md shadow-sm text-sm font-medium text-gray-300 bg-transparent hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-wildlife-purple focus:ring-offset-gray-800"
+                className="w-full flex justify-center py-2 px-4 border border-white/20 rounded-md shadow-sm text-sm font-medium text-white bg-transparent hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-300 focus:ring-offset-green-800"
                 onClick={() => setIsLogin(!isLogin)}
               >
                 {isLogin ? "Create a new account" : "Sign in to your account"}
