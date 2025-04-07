@@ -62,24 +62,24 @@ const mockAlerts = [
 
 const Dashboard: React.FC = () => {
   return (
-    <div className="flex h-screen bg-wildlife-dark">
+    <div className="flex h-screen bg-gradient-to-br from-green-900/80 to-emerald-700/90">
       <Sidebar />
       
       <div className="flex-1 flex flex-col overflow-hidden">
-        <header className="bg-wildlife-dark-blue border-b border-gray-800 px-6 py-4">
+        <header className="border-b border-gray-800/60 px-6 py-4 bg-black/20 backdrop-blur-sm">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold text-white">Dashboard</h1>
             <div className="flex items-center space-x-4">
-              <button className="p-2 rounded-full text-gray-400 hover:text-white hover:bg-gray-800">
+              <button className="p-2 rounded-full text-gray-300 hover:text-white hover:bg-black/30">
                 <Bell size={20} />
               </button>
-              <span className="text-gray-400">|</span>
-              <p className="text-gray-300">Welcome, Wildlife Ranger</p>
+              <span className="text-gray-300">|</span>
+              <p className="text-gray-200">Welcome, Wildlife Ranger</p>
             </div>
           </div>
         </header>
         
-        <main className="flex-1 overflow-y-auto p-6">
+        <main className="flex-1 overflow-y-auto p-6 bg-gradient-to-br from-green-900/80 to-emerald-700/90">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
               <StatCard
@@ -110,7 +110,7 @@ const Dashboard: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-              <div className="lg:col-span-2 glass-card rounded-xl p-6">
+              <div className="lg:col-span-2 glass-card rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-bold text-white mb-4">Wildlife Detection Trends</h3>
                 <div className="h-80">
                   <ResponsiveContainer width="100%" height="100%">
@@ -145,7 +145,7 @@ const Dashboard: React.FC = () => {
                 </div>
               </div>
               
-              <div className="glass-card rounded-xl p-6">
+              <div className="glass-card rounded-xl p-6 border border-white/10">
                 <h3 className="text-xl font-bold text-white mb-4">Weekly Incidents</h3>
                 <div className="h-80">
                   <ResponsiveContainer width="100%" height="100%">
@@ -164,7 +164,7 @@ const Dashboard: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <AlertsSection alerts={mockAlerts} />
               
-              <div className="glass-card rounded-xl overflow-hidden">
+              <div className="glass-card rounded-xl overflow-hidden border border-white/10">
                 <div className="h-1.5 w-full bg-gradient-to-r from-wildlife-teal/80 to-wildlife-teal/40"></div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center">
@@ -172,12 +172,12 @@ const Dashboard: React.FC = () => {
                     Monitoring Zones
                   </h3>
                   
-                  <div className="bg-gray-800/50 rounded-lg overflow-hidden">
+                  <div className="bg-black/30 rounded-lg overflow-hidden backdrop-blur-sm">
                     <div className="relative aspect-video">
                       <img 
                         src="/lovable-uploads/c1b3e7be-43e2-44fa-8d5a-06416526e0d7.png"
                         alt="Wildlife monitoring zones"
-                        className="object-cover w-full h-full opacity-60"
+                        className="object-cover w-full h-full opacity-70"
                       />
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="text-center bg-black/50 p-4 rounded-lg">
